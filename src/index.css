@@ -17,5 +17,5 @@ code {
 }
 
 .hero {
-  background-image: radial-gradient(50% 176%, #253854 80%, #061922 100%);
+  background-image: radial-gradient(circle at center, #253854 80%, #061922 100%);
 }
