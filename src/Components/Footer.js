@@ -6,7 +6,7 @@ function Footer() {
     return (
         <div className="flex flex-row justify-between bg-gray-600 px-10 pt-2 pb-4">
             <div className="flex flex-col justify-between items-center">
-                <Link className="font-bold text-2xl group" to={'/'}>
+                <Link className="font-bold text-2xl group drop-shadow-[3px_5px_2px_rgba(0,0,0,0.25)]" to={'/'}>
                     <span className="text-primary group-hover:text-secondary">Zack </span>
                     <span className="text-secondary group-hover:text-primary">Kelly</span>
                 </Link>
@@ -22,9 +22,8 @@ function Footer() {
                 </div>
                 <div className="text-gray-200 text-xs font-bold flex flex-col gap-[1px]">
                     <div className="text-secondary">My Links:</div>
-                    <a className="hover:text-secondary" href="https://www.google.ca">LinkedIn</a>
-                    <a className="hover:text-secondary" href="https://www.google.ca">GitHub</a>
-                    <a className="hover:text-secondary" href="https://www.google.ca">Indeed</a>
+                    <a className="hover:text-secondary" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/zack-kelly/">LinkedIn</a>
+                    <a className="hover:text-secondary" target="_blank" rel="noreferrer" href="https://github.com/zackorykelly">GitHub</a>
                 </div>
             </div>
         </div>
