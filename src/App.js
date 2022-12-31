@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
+import Contact from "./Pages/Contact";
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
             <Route path="/about" element={comingSoon()} />
             <Route path="/portfolio" element={comingSoon()} />
             <Route path="/experience" element={comingSoon()} />
-            <Route path="/contact" element={comingSoon()} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </div>
