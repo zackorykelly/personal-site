@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -9,10 +9,6 @@ function Contact() {
     })
     const [loading, setLoading] = useState(false)
     const [validationError, setValidationError] = useState(null)
-    
-    useEffect(() => {
-        console.log({formData})
-    },[formData])
 
     const handleSubmit = (e) => {
         e.preventDefault()
