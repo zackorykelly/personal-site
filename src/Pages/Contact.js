@@ -67,15 +67,18 @@ function Contact() {
 
     return (
         <div className="text-gray-200">
-            <div className="grid grid-cols-3 gap-4 mb-20 px-10">
-                <img className="drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)]" src="/keep-me-posted.png" alt="Zack Kelly" />
-                <div className="col-span-2 px-4 py-8 text-[16px] self-center text-center">
-                    <p>
-                    I would love to chat work opportunities, your latest project, anything tech, woodworking, or whatever you personally nerd out on.
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-20 px-10">
+                <img className="drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] my-auto" src="/keep-me-posted.png" alt="Zack Kelly" />
+                <div className="col-span-2 px-4 py-8 text-[18px] self-center text-left sm:text-right font-semibold">
+                    <p className="mb-2">
+                    I would love to connect, regardless of your background. If you want to talk work opportunities, 
+                    your latest project, anything tech, woodworking, trivia, etc., send me a message 
+                    from the form below.
                     </p>
                     <p>
-                    If you would like to connect professionally, send me a message and a request on{" "}
-                    <a className="hover:text-secondary underline" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/zack-kelly/">LinkedIn</a>, or email me using the form below.
+                    If you would like to connect professionally, send me a request on{" "}
+                    <a className="hover:text-secondary underline" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/zack-kelly/">LinkedIn</a>{" "}
+                    along with a short message.
                     </p>
                 </div>
             </div>
@@ -86,7 +89,7 @@ function Contact() {
                     <form className="flex flex-col gap-2"
                     onSubmit={handleSubmit}
                     >
-                        <div className="flex flex-row gap-8 justify-between">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-8 justify-between">
                             <div className="flex flex-col">
                                 <label>First Name:</label>
                                 <input className="text-gray-800 p-2 rounded bg-gray-200" type={'text'}
