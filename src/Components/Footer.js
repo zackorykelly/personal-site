@@ -15,7 +15,7 @@ function Footer() {
             <div className="flex flex-row gap-8 mr-8">
                 <div className="text-gray-200 text-xs font-bold flex flex-col gap-[1px]">
                     <div className="text-secondary">Navigation:</div>
-                    <Link className="hover:text-secondary" to={'/about'}>About</Link>
+                    <Link className="hover:text-secondary" to={'/blog'}>Blog</Link>
                     <Link className="hover:text-secondary" to={'/portfolio'}>Portfolio</Link>
                     <Link className="hover:text-secondary" to={'/experience'}>Experience</Link>
                     <Link className="hover:text-secondary" to={'/contact'}>Contact</Link>
