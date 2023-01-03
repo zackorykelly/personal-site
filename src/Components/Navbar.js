@@ -12,10 +12,10 @@ function Navbar() {
                 </Link>
             </div>
             <div className="text-gray-200 font-bold flex flex-row gap-8">
-                <Link className={`${loc.pathname === '/about' ? 'text-secondary' : 'hover:text-secondary'}`} to={'/about'}>About</Link>
-                <Link className={`${loc.pathname === '/portfolio' ? 'text-secondary' : 'hover:text-secondary'}`} to={'/portfolio'}>Portfolio</Link>
-                <Link className={`${loc.pathname === '/experience' ? 'text-secondary' : 'hover:text-secondary'}`} to={'/experience'}>Experience</Link>
-                <Link className={`${loc.pathname === '/contact' ? 'text-secondary' : 'hover:text-secondary'}`} to={'/contact'}>Contact</Link>
+                <Link className={`${loc.pathname === '/blog' ? 'text-secondary drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)]' : 'hover:text-secondary hover:drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)]'}`} to={'/blog'}>Blog</Link>
+                <Link className={`${loc.pathname === '/portfolio' ? 'text-secondary drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)]' : 'hover:text-secondary hover:drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)]'}`} to={'/portfolio'}>Portfolio</Link>
+                <Link className={`${loc.pathname === '/experience' ? 'text-secondary drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)]' : 'hover:text-secondary hover:drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)]'}`} to={'/experience'}>Experience</Link>
+                <Link className={`${loc.pathname === '/contact' ? 'text-secondary drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)]' : 'hover:text-secondary hover:drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)]'}`} to={'/contact'}>Contact</Link>
             </div>
         </div>
     )

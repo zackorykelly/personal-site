@@ -23,7 +23,7 @@ function App() {
         <div className="max-w-5xl mx-auto p-4 grow flex flex-col">
           <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/about" element={comingSoon()} />
+            <Route path="/blog" element={comingSoon()} />
             <Route path="/portfolio" element={comingSoon()} />
             <Route path="/experience" element={comingSoon()} />
             <Route path="/contact" element={<Contact />} />
