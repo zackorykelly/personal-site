@@ -1,4 +1,6 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import ReCAPTCHA from "react-google-recaptcha"
+
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -9,9 +11,16 @@ function Contact() {
     })
     const [loading, setLoading] = useState(false)
     const [validationError, setValidationError] = useState(null)
+    const [validated, setValidated] = useState(null)
+    const [openSuccess, setOpenSuccess] = useState(true)
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
+
+        if (!validated) {
+            return;
+        }
         let errors = []
         if (!formData.firstName) {
             errors.push("First Name")
@@ -50,6 +59,7 @@ function Contact() {
 
         fetch("https://us-central1-zackkelly-portfolio.cloudfunctions.net/sendMailOverHTTP", requestOptions)
         .then(response => {
+            console.log(response)
             return response.text()
         })
         .then(result => {
@@ -60,13 +70,30 @@ function Contact() {
                 message: '',
             });
             setLoading(false)
-            alert('Message Sent')
+            setOpenSuccess(true)
+            setTimeout(() => {
+                setOpenSuccess(false)
+            },2000)
         })
         .catch(error => console.log('error', error));
     }
 
+    function onChange(value) {
+        setValidated(value)
+        console.log("Captcha value:", value);
+      }
+
     return (
         <div className="text-gray-200">
+            {openSuccess && (
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded sticky top-1 z-50" role="alert">
+                <strong class="font-bold">Success:</strong>
+                <span class="block sm:inline"> Message sent successfully!</span>
+                <span class="absolute top-0 bottom-0 right-0 px-4 py-3" onClick={() => setOpenSuccess(false)}>
+                    <svg class="fill-current h-6 w-6 text-green-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+                </span>
+            </div>
+            )}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-20 mt-10 sm:px-10">
                 <img className="drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] my-auto" src="/keep-me-posted.png" alt="Zack Kelly" />
                 <div className="col-span-2 px-4 py-8 text-[18px] self-center text-left sm:text-right font-semibold">
@@ -149,8 +176,15 @@ function Contact() {
                         {validationError && (
                         <span className="text-center text-red-400 animate-bounce mt-2">{validationError}</span>
                         )}
-                        <div className="flex flex-row justify-end px-4 mt-2">
-                            <button disabled={loading} className="bg-primary px-4 py-2 rounded font-bold group hover:bg-opacity-80 hover:shadow-inner" type="submit">
+                        <div className="flex flex-row justify-between mt-4">
+                            <div>
+                                    <ReCAPTCHA
+                                    sitekey={"6LeEyBgkAAAAAHrlI-GDMxRRwB1yxXoMgCyokaK_"}
+                                    onChange={onChange}
+                                    theme="dark"
+                                    />
+                            </div>
+                            <button disabled={loading || !validated} className={`bg-primary px-4 py-2 rounded font-bold h-fit self-center group hover:bg-opacity-80 hover:shadow-inner disabled:bg-gray-500`} type="submit">
                                 {!loading ? (
                                     <span className="group-hover:drop-shadow-sm">Send</span>
                                 ) : (
@@ -167,6 +201,7 @@ function Contact() {
                 </div>
             </div>
         </div>
+
     )
 }
 

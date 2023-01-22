@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 function Footer() {
 
     return (
-        <div className="flex flex-row justify-between bg-gray-600 px-10 pt-2 pb-4">
+        <div className="block md:flex flex-row justify-between bg-gray-600 px-10 pt-2 pb-4">
             <div className="flex flex-col justify-between items-center">
                 <Link className="font-bold text-2xl group drop-shadow-[3px_5px_2px_rgba(0,0,0,0.25)]" to={'/'}>
                     <span className="text-primary group-hover:text-secondary">Zack </span>
@@ -12,7 +12,7 @@ function Footer() {
                 </Link>
                 <div className="text-gray-200 font-bold text-xs">&copy; 2022 Zack Kelly</div>
             </div>
-            <div className="flex flex-row gap-8 mr-8">
+            <div className="flex flex-row gap-8 justify-around mt-4 md:mt-0">
                 <div className="text-gray-200 text-xs font-bold flex flex-col gap-[1px]">
                     <div className="text-secondary">Navigation:</div>
                     <Link className="hover:text-secondary" to={'/blog'}>Blog</Link>
