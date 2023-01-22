@@ -12,7 +12,7 @@ function Contact() {
     const [loading, setLoading] = useState(false)
     const [validationError, setValidationError] = useState(null)
     const [validated, setValidated] = useState(null)
-    const [openSuccess, setOpenSuccess] = useState(true)
+    const [openSuccess, setOpenSuccess] = useState(false)
 
 
     const handleSubmit = (e) => {
