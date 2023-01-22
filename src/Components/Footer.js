@@ -12,7 +12,7 @@ function Footer() {
                 </Link>
                 <div className="text-gray-200 font-bold text-xs">&copy; 2022 Zack Kelly</div>
             </div>
-            <div className="flex flex-row gap-8 md:justify-center mt-4 md:mt-0">
+            <div className="flex flex-row gap-8 justify-around mt-4 md:mt-0">
                 <div className="text-gray-200 text-xs font-bold flex flex-col gap-[1px]">
                     <div className="text-secondary">Navigation:</div>
                     <Link className="hover:text-secondary" to={'/blog'}>Blog</Link>

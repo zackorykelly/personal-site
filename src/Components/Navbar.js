@@ -25,7 +25,7 @@ function Navbar() {
                     <Link className={`${loc.pathname === '/contact' ? 'text-secondary drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)]' : 'hover:text-secondary hover:drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)]'}`} to={'/contact'}>Contact</Link>
                 </div>
                 <div onClick={() => setShowNav(!showNav)} className="block md:hidden">
-                    <img src="/menu-icon.svg" alt="Menu Icon" className="text-gray-200 max-w-[40px] bg-gray-200 p-1 rounded"/>
+                    <img src="/menu-icon.svg" alt="Menu Icon" className="max-w-[40px] p-1 rounded"/>
                 </div>
             </div>
             {showNav && (

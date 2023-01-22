@@ -16,7 +16,6 @@ function App() {
   }
 
   return (
-    <>
     <div className="min-h-screen flex flex-col">
       <Navbar/>
       <div className="hero grow flex flex-col">
@@ -32,7 +31,6 @@ function App() {
       </div>
       <Footer/>
     </div>
-    </>
   );
 }
 
