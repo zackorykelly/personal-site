@@ -3,6 +3,7 @@ import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
+import Experience from "./Pages/Experience";
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/blog" element={comingSoon()} />
             <Route path="/portfolio" element={comingSoon()} />
-            <Route path="/experience" element={comingSoon()} />
+            <Route path="/experience" element={<Experience />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
