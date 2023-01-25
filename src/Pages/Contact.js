@@ -125,7 +125,7 @@ function Contact() {
                                 onChange={(e) => {
                                     setFormData({
                                         ...formData,
-                                        firstName: e.target.value.trim()
+                                        firstName: e.target.value
                                     })
                                 }}
                                 />
@@ -138,7 +138,7 @@ function Contact() {
                                 onChange={(e) => {
                                     setFormData({
                                         ...formData,
-                                        lastName: e.target.value.trim()
+                                        lastName: e.target.value
                                     })
                                 }}
                                 />
@@ -153,7 +153,7 @@ function Contact() {
                             onChange={(e) => {
                                 setFormData({
                                     ...formData,
-                                    email: e.target.value.trim()
+                                    email: e.target.value
                                 })
                             }}
                             />
@@ -168,7 +168,7 @@ function Contact() {
                             onChange={(e) => {
                                 setFormData({
                                     ...formData,
-                                    message: e.target.value.trim()
+                                    message: e.target.value
                                 })
                             }}
                             />
