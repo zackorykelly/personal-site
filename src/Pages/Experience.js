@@ -16,47 +16,54 @@ function Experience() {
                 </div>
             </div>
             <div className="mt-10">
-                <div className="grid grid-cols-3 gap-2">
+                <div className="grid grid-cols-3 gap-4">
                 <h2 className="font-extrabold text-xl text-secondary text-center">Skills:</h2>
                 <div></div>
                 <div></div>
-                    <div className="text-center">
-                        <h3 className="font-bold underline">Front-End</h3>
-                        <ul className="list-disc list-inside">
+                    <div className="flex flex-col items-center">
+                        <h3 className="font-bold underline text-center">Front-End</h3>
+                        <ul className="list-disc">
                             <li>Next.js</li>
                             <li>React</li>
                             <li>Angular</li>
                         </ul>
                     </div>
-                    <div className="text-center">
-                        <h3 className="font-bold underline">Back-End</h3>
-                        <ul className="list-disc list-inside">
+                    <div className="flex flex-col items-center">
+                        <h3 className="font-bold underline text-center">Back-End</h3>
+                        <ul className="list-disc">
                             <li>Node</li>
                             <li>Express.js</li>
                             <li>Django</li>
                             <li>Ruby on Rails</li>
                         </ul>
                     </div>
-                    <div className="text-center">
-                        <h3 className="font-bold underline">Languages</h3>
-                        <ul className="list-disc list-inside">
+                    <div className="flex flex-col items-center">
+                        <h3 className="font-bold underline text-center">Languages</h3>
+                        <ul className="list-disc">
                             <li>Javascript</li>
                             <li>Typescript</li>
                             <li>Python</li>
                             <li>Ruby</li>
                         </ul>
                     </div>
-                    <div className="text-center">
-                        <h3 className="font-bold underline">Database Related</h3>
-                        <ul className="list-disc list-inside">
+                    <div className="flex flex-col items-center">
+                        <h3 className="font-bold underline text-center">Database Related</h3>
+                        <ul className="list-disc">
                             <li>SQL</li>
                             <li>Postgres</li>
                             <li>TypeORM</li>
                         </ul>
                     </div>
-                    <div className="text-center">
-                        <h3 className="font-bold underline">Noteworthy APIs</h3>
-                        <ul className="list-disc list-inside">
+                    <div className="flex flex-col items-center">
+                        <h3 className="font-bold underline text-center">DevOps</h3>
+                        <ul className="list-disc">
+                            <li>AWS</li>
+                            <li>Firebase/GCP</li>
+                        </ul>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <h3 className="font-bold underline text-center">Noteworthy APIs</h3>
+                        <ul className="list-disc">
                             <li>Nylas</li>
                             <li>SendG   rid</li>
                             <li>MailParser</li>
