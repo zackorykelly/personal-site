@@ -4,17 +4,10 @@ import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import Experience from "./Pages/Experience";
+import Blog from "./Pages/Blog";
+import Portfolio from "./Pages/Portfolio";
 
 function App() {
-
-  //Temp - returns centered coming soon message for incomplete pages
-  const comingSoon = () => {
-    return (
-      <div className="mx-auto my-auto">
-        <div className="text-white text-[26px]">Coming Soon!</div>
-      </div>
-    )
-  }
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -23,8 +16,8 @@ function App() {
         <div className="max-w-5xl mx-auto p-4 grow flex flex-col">
           <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/blog" element={comingSoon()} />
-            <Route path="/portfolio" element={comingSoon()} />
+            <Route path="/blog" element={<Blog/>} />
+            <Route path="/portfolio" element={<Portfolio/>} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
