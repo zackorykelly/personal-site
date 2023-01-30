@@ -1,4 +1,40 @@
+import { useState } from "react"
+import ReactModal from "react-modal"
+import SimpleImageSlider from "react-simple-image-slider";
+
+const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-45%',
+      transform: 'translate(-50%, -50%)',
+      borderRadius: '1rem',
+      backgroundColor: 'grey'
+    },
+};
+
+const projects = [
+    {
+        title: 'JamSpace',
+        description: 'JamSpace is a space jam that lorem ipsum dolor sit amet. Four score and seven years ago there was lorem ipsum dolor sit amet.',
+        img: [{ url: '/reading-books.png'},{ url: '/reading-books.png'},{ url: '/Resume-No-Contact.jpg'}],
+        date: '2021',
+        links: [{ type: 'GitHub', url: 'https://github.com/zackorykelly/JamSpace' }],
+    },
+    {
+        title: 'JamSpace 2',
+        description: 'JamSpace 2 is a space jam that lorem ipsum dolor sit amet. Four score and seven years ago there was lorem ipsum dolor sit amet.',
+        img: [{ url: '/keep-me-posted.png'},{ url: '/studying.png'},{ url: '/laptop-wave.png'}],
+        date: '2023',
+        links: [{ type: 'Live', url: 'https://www.google.ca' }, { type: 'GitHub', url: 'https://github.com/zackorykelly/JamSpace' }],
+    },
+]
+
 function Portfolio() {
+    const [open, setOpen] = useState(false);
+    const [activeProject, setActiveProject] = useState(null);
 
     return (
         <div className="text-gray-200">
@@ -13,6 +49,81 @@ function Portfolio() {
                     </p>
                 </div>
             </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {projects.map((proj) => {
+                    return (
+                        <div
+                        onClick={() => {
+                            setOpen(!open);
+                            setActiveProject(proj)
+                        }}
+                        className="border-gray-500 hover:border-gray-400 hover:bg-gray-700 border-dashed border-[1px] hover:shadow-lg rounded-2xl"
+                        >
+                            <img src={proj.img[0].url} alt="Thumbnail" className="rounded-t-2xl max-h-[150px] mx-auto" />
+                            <div className="p-3">
+                                <div className="font-bold text-center">{proj.title}</div>
+                                <div className="my-2">
+                                    {proj.description.substring(0,100).trimEnd() + '...'}
+                                </div>
+                                <div>{proj.date}</div>
+                                <div>
+                                    <SimpleImageSlider
+                                    images={proj.img}/>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
+            {open && activeProject && (
+                <ReactModal
+                isOpen={open}
+                onRequestClose={() => {
+                    setOpen(!open);
+                    setActiveProject(null)
+                }}
+                style={customStyles}
+                contentLabel="Example Modal"
+                >
+                    <div className="px-2">
+                        <div className="font-bold text-2xl mb-2">{activeProject.title}</div>
+                        <div className="grid grid-cols-1 lg:grid-cols-2">
+                            <div className="block lg:hidden mx-auto">
+                                <SimpleImageSlider
+                                width={250}
+                                height={250}
+                                images={activeProject.img}
+                                showBullets={true}
+                                showNavs={true}
+                                style={{ borderRadius: '1rem' }}
+                                />
+                            </div>
+                            <div className="hidden lg:block">
+                                <SimpleImageSlider
+                                width={400}
+                                height={400}
+                                images={activeProject.img}
+                                showBullets={true}
+                                showNavs={true}
+                                style={{ borderRadius: '1rem' }}
+                                />
+                            </div>
+                            <div className="">
+                                <div>Description: {activeProject.description}</div>
+                                <div className="mt-4">Links:</div>
+                                {activeProject.links.map((link) => {
+                                    return (
+                                        <div>
+                                            <span>{link.type}: </span>
+                                            <a className="text-secondary hover:underline" href={link.url}>{link.url}</a>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                </ReactModal>
+            )}
         </div>
     )
 }

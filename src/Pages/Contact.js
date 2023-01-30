@@ -177,11 +177,19 @@ function Contact() {
                         <span className="text-center text-red-400 animate-bounce mt-2">{validationError}</span>
                         )}
                         <div className="flex flex-row justify-between mt-4">
-                            <div>
+                            <div className="hidden sm:block">
                                     <ReCAPTCHA
                                     sitekey={"6LeEyBgkAAAAAHrlI-GDMxRRwB1yxXoMgCyokaK_"}
                                     onChange={onChange}
                                     theme="dark"
+                                    />
+                            </div>
+                            <div className="block sm:hidden">
+                                    <ReCAPTCHA
+                                    sitekey={"6LeEyBgkAAAAAHrlI-GDMxRRwB1yxXoMgCyokaK_"}
+                                    onChange={onChange}
+                                    theme="dark"
+                                    size="compact"
                                     />
                             </div>
                             <button disabled={loading || !validated} className={`bg-primary px-4 py-2 rounded font-bold h-fit self-center group hover:bg-opacity-80 hover:shadow-inner disabled:bg-gray-500`} type="submit">

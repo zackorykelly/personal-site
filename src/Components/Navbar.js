@@ -29,7 +29,7 @@ function Navbar() {
                 </div>
             </div>
             {showNav && (
-                <div className="text-gray-200 font-bold flex md:hidden flex-col mt-2 text-center">
+                <div className="text-gray-200 font-bold flex md:hidden flex-col mt-2 text-center pb-[2px] border-t-[1px] border-dashed border-gray-700">
                     <Link className={`py-2 ${loc.pathname === '/blog' ? 'text-secondary drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] bg-gray-500' : 'hover:text-secondary hover:drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] hover:bg-gray-500'}`} to={'/blog'}>Blog</Link>
                     
                     <Link className={`py-2 ${loc.pathname === '/portfolio' ? 'text-secondary drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] bg-gray-500' : 'hover:text-secondary hover:drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] hover:bg-gray-500'}`} to={'/portfolio'}>Portfolio</Link>
