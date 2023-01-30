@@ -3,7 +3,8 @@ function Experience() {
     return (
         <div className="text-gray-200">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-20 mt-10 sm:px-10">
-                <div className="col-span-2 px-4 py-8 text-[18px] self-center text-left font-semibold">
+                <img className="drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] my-auto" src="/reading-books.png" alt="Zack Kelly" />
+                <div className="col-span-2 px-4 py-8 text-[18px] self-center text-left sm:text-right font-semibold">
                     <p className="mb-2">
                     I've been lucky to have worked in multiple startup environments, wearing multiple hats and having to learn new
                     technologies and tools quickly.
@@ -13,7 +14,6 @@ function Experience() {
                     <a className=" hover:text-secondary font-extrabold" href="/ZackKellyResume.pdf" download> download it</a>).
                     </p>
                 </div>
-                <img className="drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] my-auto" src="/reading-books.png" alt="Zack Kelly" />
             </div>
             <div className="mt-10">
                 <div className="grid grid-cols-3 gap-4">
@@ -65,7 +65,7 @@ function Experience() {
                         <h3 className="font-bold underline text-center">Noteworthy APIs</h3>
                         <ul className="list-disc">
                             <li>Nylas</li>
-                            <li>SendG   rid</li>
+                            <li>SendGrid</li>
                             <li>MailParser</li>
                             <li>RentSync</li>
                         </ul>
@@ -73,7 +73,7 @@ function Experience() {
                 </div>
             </div>
             <div className="mt-10">
-                <img className="w-3/4 max-w-[1000px] mx-auto" src={'Resume-No-Contact.jpg'} alt={'resume'} />
+                <img className="w-3/4 max-w-[1000px] mx-auto rounded" src={'Resume-No-Contact.jpg'} alt={'resume'} />
             </div>
         </div>
     )
