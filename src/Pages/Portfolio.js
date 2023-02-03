@@ -17,18 +17,39 @@ const customStyles = {
 
 const projects = [
     {
+        title: 'This Site! (zackkelly.dev)',
+        description: 'A simple portfolio webapp built to showcase some of my work and experience. It also serves as a creative outlet and a place to test out features and technologies.',
+        img: [{ url: '/reading-books.png'}],
+        date: '2023',
+        links: [{ type: 'GitHub', url: ''}, { type: 'Live', url: ''}],
+    },
+    {
+        title: 'KnownUnknown - Helvetica',
+        description: '',
+        img: [{ url: '/reading-books.png'}],
+        date: '2022',
+        links: [{ type: 'None', url: '' }],
+    },
+    {
+        title: 'Chain Champs',
+        description: '',
+        img: [{ url: '/reading-books.png'}],
+        date: '2021',
+        links: [{ type: 'Live', url: '' }],
+    },
+    {
+        title: 'RealSage',
+        description: '',
+        img: [{ url: '/reading-books.png'}],
+        date: '2021',
+        links: [{ type: 'Live', url: '' }],
+    },
+    {
         title: 'JamSpace',
         description: 'JamSpace is a space jam that lorem ipsum dolor sit amet. Four score and seven years ago there was lorem ipsum dolor sit amet.',
         img: [{ url: '/reading-books.png'},{ url: '/reading-books.png'},{ url: '/Resume-No-Contact.jpg'}],
         date: '2021',
         links: [{ type: 'GitHub', url: 'https://github.com/zackorykelly/JamSpace' }],
-    },
-    {
-        title: 'JamSpace 2',
-        description: 'JamSpace 2 is a space jam that lorem ipsum dolor sit amet. Four score and seven years ago there was lorem ipsum dolor sit amet.',
-        img: [{ url: '/keep-me-posted.png'},{ url: '/studying.png'},{ url: '/laptop-wave.png'}],
-        date: '2023',
-        links: [{ type: 'Live', url: 'https://www.google.ca' }, { type: 'GitHub', url: 'https://github.com/zackorykelly/JamSpace' }],
     },
 ]
 
