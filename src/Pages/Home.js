@@ -7,7 +7,8 @@ function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-20 mt-10 sm:px-10">
                 <img className="drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] my-auto" src="/laptop-wave.png" alt="Zack Kelly" />
                 <div className="col-span-2 px-4 py-8 text-[22px] self-center text-center">
-                    Coming Soon!
+                    <p className="mb-2">Hi, I'm Zack, a software developer experienced in working across the stack to develop and ship scalable and effective features and products.</p>
+                    <p>This portfolio site features some of my work and experience, housed in a simple application.</p>
                 </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:px-10 mb-10">

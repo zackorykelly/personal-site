@@ -17,18 +17,39 @@ const customStyles = {
 
 const projects = [
     {
+        title: 'This Site! (zackkelly.dev)',
+        description: 'A simple portfolio webapp built to showcase some of my work and experience. It also serves as a creative outlet and a place to test out features and technologies.',
+        img: [],
+        date: '2023',
+        links: [{ type: 'GitHub', url: ''}],
+    },
+    {
+        title: 'KnownUnknown - Helvetica',
+        description: '',
+        img: [],
+        date: '2022',
+        links: [],
+    },
+    {
+        title: 'Chain Champs',
+        description: '',
+        img: [],
+        date: '2021',
+        links: [],
+    },
+    {
+        title: 'RealSage',
+        description: '',
+        img: [],
+        date: '2021',
+        links: [],
+    },
+    {
         title: 'JamSpace',
         description: 'JamSpace is a space jam that lorem ipsum dolor sit amet. Four score and seven years ago there was lorem ipsum dolor sit amet.',
         img: [{ url: '/reading-books.png'},{ url: '/reading-books.png'},{ url: '/Resume-No-Contact.jpg'}],
         date: '2021',
         links: [{ type: 'GitHub', url: 'https://github.com/zackorykelly/JamSpace' }],
-    },
-    {
-        title: 'JamSpace 2',
-        description: 'JamSpace 2 is a space jam that lorem ipsum dolor sit amet. Four score and seven years ago there was lorem ipsum dolor sit amet.',
-        img: [{ url: '/keep-me-posted.png'},{ url: '/studying.png'},{ url: '/laptop-wave.png'}],
-        date: '2023',
-        links: [{ type: 'Live', url: 'https://www.google.ca' }, { type: 'GitHub', url: 'https://github.com/zackorykelly/JamSpace' }],
     },
 ]
 
@@ -42,10 +63,10 @@ function Portfolio() {
                 <img className="drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] my-auto" src="/portfolio.png" alt="Zack Kelly" />
                 <div className="col-span-2 px-4 py-8 text-[18px] self-center text-left sm:text-right font-semibold">
                     <p className="mb-2">
-                    p1
+                    Below is a sample of some projects I've worked on both professionally and in my own time.
                     </p>
                     <p>
-                    p2
+                    Where possible, I've included links to see them hosted live.
                     </p>
                 </div>
             </div>
