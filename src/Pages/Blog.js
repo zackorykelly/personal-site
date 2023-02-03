@@ -29,10 +29,10 @@ function Blog() {
                 <img className="drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] my-auto" src="/studying.png" alt="Zack Kelly" />
                 <div className="col-span-2 px-4 py-8 text-[18px] self-center text-left sm:text-right font-semibold">
                     <p className="mb-2">
-                    p1
+                    While I don't have a regular publishing schedule, any articles I write on my medium account will automatically be added below.
                     </p>
                     <p>
-                    p2
+                    If there's something you think I should write about, let me know!
                     </p>
                 </div>
             </div>
