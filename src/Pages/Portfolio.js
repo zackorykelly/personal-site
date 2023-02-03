@@ -63,10 +63,10 @@ function Portfolio() {
                 <img className="drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] my-auto" src="/portfolio.png" alt="Zack Kelly" />
                 <div className="col-span-2 px-4 py-8 text-[18px] self-center text-left sm:text-right font-semibold">
                     <p className="mb-2">
-                    p1
+                    Below is a sample of some projects I've worked on both professionally and in my own time.
                     </p>
                     <p>
-                    p2
+                    Where possible, I've included links to see them hosted live.
                     </p>
                 </div>
             </div>
