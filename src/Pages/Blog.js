@@ -43,7 +43,7 @@ function Blog() {
                             <a href={item.link} target="_blank" rel="noreferrer">
                                 <img src={item.thumbnail} alt="Thumbnail" className="rounded-t-2xl" />
                                 <div className="p-3">
-                                    <div className="font-bold">{item.title}</div>
+                                    <div className="font-bold text-center">{item.title}</div>
                                     <div className="my-2">
                                         {item.description.substring(4,150).trim() + '...'}
                                     </div>

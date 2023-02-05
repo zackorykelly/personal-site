@@ -108,7 +108,7 @@ function Portfolio() {
                 >
                     <div className="px-2">
                         <div className="font-bold text-2xl mb-2">{activeProject.title}</div>
-                        <div className="grid grid-cols-1 lg:grid-cols-2">
+                        <div className="grid grid-cols-1 lg:grid-cols-3">
                             <div className="block lg:hidden mx-auto">
                                 <SimpleImageSlider
                                 width={250}
@@ -129,13 +129,13 @@ function Portfolio() {
                                 style={{ borderRadius: '1rem' }}
                                 />
                             </div>
-                            <div className="">
-                                <div>Description: {activeProject.description}</div>
-                                <div className="mt-4">Links:</div>
+                            <div className="lg:col-span-2">
+                                <div><span className="font-bold">Description:</span> {activeProject.description}</div>
+                                <div className="mt-4 underline text-lg">Links</div>
                                 {activeProject.links.map((link) => {
                                     return (
                                         <div>
-                                            <span>{link.type}: </span>
+                                            <span className="font-bold">{link.type}: </span>
                                             <a className="text-secondary hover:underline" href={link.url}>{link.url}</a>
                                         </div>
                                     )
