@@ -78,7 +78,7 @@ function Portfolio() {
                             setOpen(!open);
                             setActiveProject(proj)
                         }}
-                        className="border-gray-500 hover:border-gray-400 hover:bg-gray-700 border-dashed border-[1px] hover:shadow-lg rounded-2xl"
+                        className="border-gray-500 hover:border-gray-400 hover:bg-gray-700 border-dashed border-[1px] hover:shadow-lg rounded-2xl cursor-pointer"
                         >
                             <img src={proj.img[0].url} alt="Thumbnail" className="rounded-t-2xl max-h-[150px] mx-auto" />
                             <div className="p-3">
