@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "~react-image-gallery/styles/css/image-gallery.css";
 
 body {
   margin: 0;
@@ -18,4 +19,29 @@ code {
 
 .hero {
   background-image: radial-gradient(circle at center, #253854 80%, #061922 100%);
+}
+
+.fullscreen .image-gallery-image {
+  height: 100%;
+}
+
+.image-gallery-image {
+  height: 400px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* .image-gallery-slide-wrapper {
+  height: 400px;
+} */
+
+/* .image-gallery-slides {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.image-gallery-swipe {
+  height: 100%;
 }

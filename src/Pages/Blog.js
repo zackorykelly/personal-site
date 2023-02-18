@@ -36,10 +36,10 @@ function Blog() {
                     </p>
                 </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3">
+            <div className="flex flex-wrap justify-center gap-4">
                 {blogData && blogData.items.map((item) => {
                     return (
-                        <div className="border-gray-500 hover:border-gray-400 hover:bg-gray-700 border-dashed border-[1px] hover:shadow-lg rounded-2xl">
+                        <div className="border-gray-500 hover:border-gray-400 hover:bg-gray-700 border-dashed border-[1px] hover:shadow-lg rounded-2xl w-[300px]">
                             <a href={item.link} target="_blank" rel="noreferrer">
                                 <img src={item.thumbnail} alt="Thumbnail" className="rounded-t-2xl" />
                                 <div className="p-3">
