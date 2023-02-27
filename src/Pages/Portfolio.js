@@ -92,10 +92,15 @@ function Portfolio() {
                         >
                             <img src={proj.img[0].original} alt="Thumbnail" className="rounded-2xl h-[150px] mx-auto" />
                             <div className="p-3">
-                                <div className="font-bold text-center">{proj.title}</div>
-                                <div className="my-2 w-full">
+                                <div className="mb-2 font-bold text-center">{proj.title}</div>
+                                <div className="mb-2 w-full">
                                     {proj.description.substring(0,100).trimEnd() + '...'}
                                 </div>
+                                {/* <div className="mb-2">
+                                    <span className="bg-red-200 rounded-2xl text-gray-500">
+                                        <span>meat</span>
+                                    </span>
+                                </div> */}
                                 <div>{proj.date}</div>
                             </div>
                         </div>

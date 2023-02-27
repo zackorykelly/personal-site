@@ -45,9 +45,9 @@ function Blog() {
                                 <div className="p-3">
                                     <div className="font-bold text-center">{item.title}</div>
                                     <div className="my-2">
-                                        {item.description.substring(4,150).trim() + '...'}
+                                        {item.description.substring(4,175).trim() + '...'}
                                     </div>
-                                    <div>{item.author}</div>
+                                    {/* <div>{item.author}</div> */}
                                     <div>{item.pubDate.substring(0,10)}</div>
                                 </div>
                             </a>
