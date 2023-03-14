@@ -13,15 +13,16 @@ const customStyles = {
       marginRight: '-45%',
       transform: 'translate(-50%, -50%)',
       borderRadius: '1rem',
-      backgroundColor: 'grey'
+      backgroundColor: '#52525B',
+      color: '#E4E4E7'
     },
 };
 
 const projects = [
     {
         title: 'zackkelly.dev (This Site!)',
-        description: 'A simple portfolio webapp used to showcase some of my work and experience, while giving me a place to try out new things.',
-        technology: 'Created with React, Tailwind, and React Router, and hosted using firebase hosting. Additional technologies include google recaptcha and cloud functions for contact form.',
+        description: 'A simple portfolio webapp used to showcase some of my work and experience, and giving me a place to try out new things.',
+        technology: 'Created with React, TailwindCSS, and React Router, and hosted using Google Firebase hosting. Additional technologies include Recaptcha and GCP cloud functions for the contact form.',
         img: [{ original: '/zk1.png'},{ original: '/zk2.png'},{ original: '/zk3.png'},{ original: '/zk4.png'},{ original: '/zk5.png'}],
         date: '2021 - 2023',
         links: [{ type: 'GitHub', url: 'https://github.com/zackorykelly/personal-site'}, { type: 'Live', url: 'https://zackkelly.dev'}],
@@ -36,18 +37,18 @@ const projects = [
     // },
     {
         title: 'Chain Champs',
-        description: 'Originally conceived as an NFT marketplace built to have the fastest live feed of secondary market sales. Expanded to include PFP, NFT, pack, and drop creation tools, data insights, auto-buy functionality and more.',
+        description: 'Originally conceived as an NFT marketplace built to have the fastest live feed of secondary market sales. Since expanded to include a PFP generator, NFT drop and pack creation tools, data insights, auto-buy functionality and more.',
         img: [{ original: '/cc1.png'},{ original: '/cc2.png'},{ original: '/cc3.png'},{ original: '/cc4.png'},{ original: '/cc5.png'}],
-        technology: 'Angular frontend and node express backend using typescript. Additional integrations with data processing servers and interactions with smart contracts on the blockchain. PSQL database and python modeling.',
+        technology: 'Angular frontend and node express backend using typescript. Additional integrations with data processing servers and interactions with smart contracts on the blockchain. PSQL for primary data storage and python modeling.',
         date: '2021 - 2023',
         links: [{ type: 'Live', url: 'https://www.chainchamps.com' }],
         tags: ['angular', 'node.js', 'express', 'bootstrap', 'psql', 'sequelize'],
     },
     {
         title: 'RealSage',
-        description: 'A software subscription platform for landlords, allowing management of leads and tenant acquisition, pricing information, and insights on data.',
+        description: 'A software subscription platform for landlords, allowing management of leads and tenant acquisition, pricing information, and data insights on your portfolio.',
         img: [{ original: '/rs4.png'},{ original: '/rs2.png'},{ original: '/rs3.png'},{ original: '/rs1.png'}],
-        technology: 'Next.js frontend including tailwind styling, and a microservice based backend built using node express typescript servers, hosted on AWS. PSQL database. Many custom integrations including Nylas, RentSync, SendGrid, Mailparser and others.',
+        technology: 'Next.js frontend including TailwindCSS styling. Microservice based backend built using node express Typescript servers, hosted on AWS. Primary data storage using PSQL. Custom integrations with a number of platforms including Nylas, RentSync, SendGrid, Mailparser and others.',
         date: '2021 - 2023',
         links: [{ type: 'Live', url: 'https://www.realsage.com' }],
         tags: ['next.js','node.js','express','tailwind'],
@@ -56,7 +57,7 @@ const projects = [
         title: 'JamSpace',
         description: '"GitHub for songwriting" - Basic sound recorder/file manager. Users can record audio to files, share projects, manipulate recordings. Built over the course of 1.5 weeks for Lighthouse Labs Web Development bootcamp.',
         img: [{ original: '/js1.png'},{ original: '/js2.png'},{ original: '/js3.png'},{ original: '/js4.png'}],
-        technology: 'React frontend including bootstrap styles. Node express backend using javascript, and PSQL database.',
+        technology: 'React frontend including bootstrap styling. Node express backend using Javascript, and PSQL database.',
         date: '2021',
         links: [{ type: 'GitHub', url: 'https://github.com/zackorykelly/JamSpace' }],
         tags: ['react', 'node.js', 'express'],
@@ -133,12 +134,13 @@ function Portfolio() {
                                 </div>
                             </div>
                             <div className="grow">
-                                <div><span className="font-bold">Description:</span> {activeProject.description}</div>
-                                <div className="mt-4 underline text-lg">Links</div>
+                                <div className="mb-4"><span className="font-bold">Description:</span> {activeProject.description}</div>
+                                <div className="mb-4"><span className="font-bold">Technology:</span> {activeProject.technology}</div>
+                                <div className="font-bold">Links:</div>
                                 {activeProject.links.map((link) => {
                                     return (
                                         <div>
-                                            <span className="font-bold">{link.type}: </span>
+                                            <span className="font-semibold">- {link.type}: </span>
                                             <a className="text-secondary hover:underline" href={link.url}>{link.url}</a>
                                         </div>
                                     )

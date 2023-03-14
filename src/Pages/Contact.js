@@ -98,12 +98,12 @@ function Contact() {
                 <img className="drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] my-auto" src="/keep-me-posted.png" alt="Zack Kelly" />
                 <div className="col-span-2 px-4 py-8 text-[18px] self-center text-left sm:text-right font-semibold">
                     <p className="mb-2">
-                    I would love to connect, regardless of your background. If you want to talk work opportunities, 
-                    your latest project, anything tech, woodworking, trivia, etc., send me a message 
-                    from the form below.
+                    I would love to connect, even if our backgrounds don't line up perfectly. If you want to talk work opportunities, 
+                    your latest project, or anything tech, woodworking, or nerd related, send me a message 
+                    using the form below.
                     </p>
                     <p>
-                    If you would like to connect professionally, send me a request on{" "}
+                    If you would prefer to connect professionally, send me a request on{" "}
                     <a className="hover:text-secondary underline" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/zack-kelly/">LinkedIn</a>{" "}
                     along with a short message.
                     </p>
@@ -112,7 +112,7 @@ function Contact() {
             <div className="flex flex-col justify-center items-center mb-10">
                 <div className="flex flex-col">
                     <span className="text-[26px] text-center font-bold">Contact Me</span>
-                    <span className="text-center text-[16px] mb-4 max-w-md">I do my best to respond to messages within 48 hours.</span>
+                    <span className="text-center text-[16px] mb-4 max-w-md">I do my best to respond to all messages within 48 hours.</span>
                     <form className="flex flex-col gap-2"
                     onSubmit={handleSubmit}
                     >

@@ -6,8 +6,7 @@ function Experience() {
                 <img className="drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] my-auto" src="/reading-books.png" alt="Zack Kelly" />
                 <div className="col-span-2 px-4 py-8 text-[18px] self-center text-left sm:text-right font-semibold">
                     <p className="mb-2">
-                    I've been lucky to have worked in multiple startup environments, wearing multiple hats and having to learn new
-                    technologies and tools quickly.
+                    I'm lucky to have worked in multiple fast-paced startup environments, wearing multiple hats and learning new tools and technologies quickly.
                     </p>
                     <p>
                     Below are some of the frameworks and languages I have experience with, as well as a copy of my resume (or you can 
@@ -62,7 +61,7 @@ function Experience() {
                         </ul>
                     </div>
                     <div className="flex flex-col items-center">
-                        <h3 className="font-bold underline text-center">Noteworthy APIs</h3>
+                        <h3 className="font-bold underline text-center">3rd Party APIs</h3>
                         <ul className="list-disc">
                             <li>Nylas</li>
                             <li>SendGrid</li>
