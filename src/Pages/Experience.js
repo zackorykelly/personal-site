@@ -101,7 +101,7 @@ function Experience() {
             <div className="mt-10">
                 <div className="grid grid-cols-3 gap-4 mb-4">
                     <h2 className="font-extrabold text-xl text-secondary text-center flex items-center justify-center">
-                        <a href="/ZackKellyResume.pdf" download>
+                        <a href="/ZackKellyResume-1.pdf" download>
                             <div className="w-10 h-10 hover:bg-gray-700 rounded-md p-1">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 16L12 8" stroke="#77d4fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 13L11.913 15.913V15.913C11.961 15.961 12.039 15.961 12.087 15.913V15.913L15 13" stroke="#77d4fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M3 15L3 16L3 19C3 20.1046 3.89543 21 5 21L19 21C20.1046 21 21 20.1046 21 19L21 16L21 15" stroke="#77d4fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                             </div>
@@ -111,7 +111,7 @@ function Experience() {
                     <div></div>
                     <div></div>
                 </div>
-                <img className="w-3/4 max-w-[1000px] mx-auto rounded" src={'Resume-No-Contact.jpg'} alt={'resume'} />
+                <img className="w-3/4 max-w-[1000px] mx-auto rounded" src={'Resume-No-Contact-1.png'} alt={'resume'} />
             </div>
         </div>
     )
