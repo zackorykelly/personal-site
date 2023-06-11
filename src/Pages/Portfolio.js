@@ -1,9 +1,8 @@
 import { useState } from "react"
 import ReactModal from "react-modal"
-import SimpleImageSlider from "react-simple-image-slider";
-import ImageSlider from "react-simple-image-slider";
 import ReactImageGallery from "react-image-gallery";
 
+// Styles for the image gallery modal
 const customStyles = {
     content: {
       top: '50%',
@@ -18,23 +17,17 @@ const customStyles = {
     },
 };
 
+// Project data
 const projects = [
     {
         title: 'zackkelly.dev (This Site!)',
-        description: 'A simple portfolio webapp used to showcase some of my work and experience, and giving me a place to try out new things.',
+        description: 'A simple portfolio webapp used to showcase some of my work and experience as a software developer.',
         technology: 'Created with React, TailwindCSS, and React Router, and hosted using Google Firebase hosting. Additional technologies include Recaptcha and GCP cloud functions for the contact form.',
         img: [{ original: '/zk1.png'},{ original: '/zk2.png'},{ original: '/zk3.png'},{ original: '/zk4.png'},{ original: '/zk5.png'}],
         date: '2021 - 2023',
         links: [{ type: 'GitHub', url: 'https://github.com/zackorykelly/personal-site'}, { type: 'Live', url: 'https://zackkelly.dev'}],
         tags: ['react', 'tailwind', 'firebase', 'gcp'],
     },
-    // {
-    //     title: 'KnownUnknown - Helvetica',
-    //     description: '',
-    //     img: [{ url: '/reading-books.png'}],
-    //     date: '2022',
-    //     links: [{ type: 'None', url: '' }],
-    // },
     {
         title: 'Chain Champs',
         description: 'Originally conceived as an NFT marketplace built to have the fastest live feed of secondary market sales. Since expanded to include a PFP generator, NFT drop and pack creation tools, data insights, auto-buy functionality and more.',
@@ -42,7 +35,7 @@ const projects = [
         technology: 'Angular frontend and node express backend using typescript. Additional integrations with data processing servers and interactions with smart contracts on the blockchain. PSQL for primary data storage and python modeling.',
         date: '2021 - 2023',
         links: [{ type: 'Live', url: 'https://www.chainchamps.com' }],
-        tags: ['angular', 'node.js', 'express', 'bootstrap', 'psql', 'sequelize'],
+        tags: ['angular', 'node.js', 'express', 'bootstrap', 'psql', 'sequelize', 'web3'],
     },
     {
         title: 'RealSage',
@@ -54,13 +47,22 @@ const projects = [
         tags: ['next.js','node.js','express','tailwind'],
     },
     {
+        title: 'KnownUnknown - Helvetica',
+        description: 'Contracted webapp built to advertise and sell a collection of NFTs based on the Helvetica font in partnership with owner Monotype and KnownUnknown.',
+        img: [{ original: '/KU-1.png'},{ original: '/KU-2.png'},{ original: '/KU-3.png'},{ original: '/KU-4.png'},{ original: '/KU-5.png'},{ original: '/KU-6.png'}],
+        technology: 'Frontend built using React and TailwindCSS. Integrations with Thirdweb API to interact with Avalanche blockchain, and Paper.xyz for credit card sales.',
+        date: '2022',
+        links: [{ type: 'Live', url: 'https://helvetica.knownunknown.com' }],
+        tags: ['react', 'tailwind', 'web3']
+    },
+    {
         title: 'JamSpace',
         description: '"GitHub for songwriting" - Basic sound recorder/file manager. Users can record audio to files, share projects, manipulate recordings. Built over the course of 1.5 weeks for Lighthouse Labs Web Development bootcamp.',
         img: [{ original: '/js1.png'},{ original: '/js2.png'},{ original: '/js3.png'},{ original: '/js4.png'}],
         technology: 'React frontend including bootstrap styling. Node express backend using Javascript, and PSQL database.',
         date: '2021',
         links: [{ type: 'GitHub', url: 'https://github.com/zackorykelly/JamSpace' }],
-        tags: ['react', 'node.js', 'express'],
+        tags: ['react', 'node.js', 'express', 'psql', 'bootstrap'],
     },
 ]
 
@@ -97,11 +99,6 @@ function Portfolio() {
                                 <div className="mb-2 w-full">
                                     {proj.description.substring(0,100).trimEnd() + '...'}
                                 </div>
-                                {/* <div className="mb-2">
-                                    <span className="bg-red-200 rounded-2xl text-gray-500">
-                                        <span>meat</span>
-                                    </span>
-                                </div> */}
                                 <div>{proj.date}</div>
                             </div>
                         </div>

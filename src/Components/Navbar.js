@@ -6,6 +6,7 @@ function Navbar() {
     const loc = useLocation()
     const [showNav, setShowNav] = useState(false);
 
+    // Close the mobile nav when the user navigates to a new page
     useEffect(() => {
         setShowNav(false)
     },[loc])

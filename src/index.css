@@ -31,17 +31,6 @@ code {
   margin-bottom: auto;
 }
 
-/* .image-gallery-slide-wrapper {
-  height: 400px;
-} */
-
-/* .image-gallery-slides {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .image-gallery-swipe {
   height: 100%;
 }
