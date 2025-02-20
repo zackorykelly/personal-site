@@ -12,10 +12,10 @@ function Home() {
                 </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:px-10 mb-10">
-                <Link to={"/blog"} className="border-gray-500 hover:border-gray-400 hover:bg-gray-700 hover:shadow-lg group border-dashed border-[1px] rounded-2xl p-4">
+                {/* <Link to={"/blog"} className="border-gray-500 hover:border-gray-400 hover:bg-gray-700 hover:shadow-lg group border-dashed border-[1px] rounded-2xl p-4">
                     <img className="group-hover:drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] my-auto" src="/studying.png" alt="Blog" />
                     <div className="group-hover:drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] text-center font-bold text-[20px]">Blog</div>
-                </Link>
+                </Link> */}
                 <Link to={"/portfolio"} className="border-gray-500 hover:border-gray-400 hover:bg-gray-700 hover:shadow-lg group border-dashed border-[1px] rounded-2xl p-4">
                     <img className="group-hover:drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] my-auto" src="/portfolio.png" alt="Portfolio" />
                     <div className="group-hover:drop-shadow-[6px_10px_4px_rgba(0,0,0,0.3)] text-center font-bold text-[20px]">Portfolio</div>
